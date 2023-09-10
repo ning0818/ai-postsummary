@@ -4,8 +4,8 @@
   "description": "AI文章摘要",
   "main": "index.js",
   "scripts": {
+    "build": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-    "build": "node index.js"
   },
   "author": "",
   "license": "ISC",
