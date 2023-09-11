@@ -13,6 +13,7 @@
     "@types/node": "^20.6.0",
     "@vercel/node": "^3.0.4",
     "javascript": "^1.0.0",
+    "node-fetch": "^3.3.2",
     "simplest-server": "^2.0.0"
   }
 }
