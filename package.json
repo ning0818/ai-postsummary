@@ -4,9 +4,10 @@
   "description": "AI文章摘要",
   "main": "index.js",
   "scripts": {
-    "build": "node index.js",
+    "build": "npm i simplest-server && npm i @vercel/node && npm i node-fetch && npm i javascript && node index.js",
+    "test": "echo \"Error: no test specified\""
   },
-  "author": "",
+  "author": "yn",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^20.6.0",
