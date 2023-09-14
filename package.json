@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "AI文章摘要",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "node index.js",
     "test": "echo \"Error: no test specified\""
