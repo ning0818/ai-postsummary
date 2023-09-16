@@ -11,7 +11,7 @@ ss.http({
         res.setHeader('Cache-Control', 'max-age=7200');
         if ((req.headers.origin || "").indexOf('ning0818.top')===-1){
             res.writeHead(403, { "Content-Type": "application/json;charset=utf-8" });
-            res.end(JSON.stringify({summary: "仅可用于https://ning0818.top的文章摘要生成!!"}));
+            res.end(JSON.stringify({summary: "403referer与key不匹配。当前key仅可用于https://ning0818.top的文章摘要生成。"}));
             return;
         }
         fetch("http://lemurchat.anfans.cn/api/chat/conversation-trial", {
