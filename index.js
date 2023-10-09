@@ -35,7 +35,7 @@ ss.http({
                     }
                 }
                 res.writeHead(200, { "Content-Type": "application/json;charset=utf-8" });
-                res.end(JSON.stringify({summary: word}));
+                res.end(JSON.stringify(word));
             })
         });
     }}).listen(3000)
