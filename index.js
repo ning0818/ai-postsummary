@@ -9,7 +9,7 @@ ss.http({
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Vercel-CDN-Cache-Control', 'max-age=7200');
         res.setHeader('Cache-Control', 'max-age=7200');
-        if ((req.headers.origin || "").indexOf('http://localhost')===1){
+        if ((req.headers.origin || "").indexOf('localhost')===1){
             res.writeHead(402, { "Content-Type": "application/json;charset=utf-8" });
             res.end(警告：请勿在本地主机上测试密钥。);
             return;
