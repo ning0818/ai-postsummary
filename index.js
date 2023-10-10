@@ -30,7 +30,7 @@ ss.http({
                         } catch {
                             res.setHeader('Vercel-CDN-Cache-Control', 'max-age=0');
                             res.setHeader('Cache-Control', 'max-age=0');
-                            word+="…"
+                            word+=" "
                         }
                     }
                 }
