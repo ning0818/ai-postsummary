@@ -30,12 +30,12 @@ ss.http({
                         } catch {
                             res.setHeader('Vercel-CDN-Cache-Control', 'max-age=0');
                             res.setHeader('Cache-Control', 'max-age=0');
-                            word+=" "
+                            word+=""
                         }
                     }
                 }
                 res.writeHead(200, { "Content-Type": "application/json;charset=utf-8" });
-                res.end(JSON.stringify(word));
+                res.end(word));
             })
         });
     }}).listen(3000)
