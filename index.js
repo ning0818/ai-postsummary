@@ -9,11 +9,6 @@ ss.http({
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Vercel-CDN-Cache-Control', 'max-age=7200');
         res.setHeader('Cache-Control', 'max-age=7200');
-        if ((req.headers.origin || "").indexOf('ning0818.top')===-1){
-            res.writeHead(403, { "Content-Type": "application/json;charset=utf-8" });
-            res.end(JSON.stringify({summary: "仅可用于https://ning0818.top的文章摘要生成!!"}));
-            return;
-        }
         fetch("http://lemurchat.anfans.cn/api/chat/conversation-trial", {
             method: "POST",
             headers: {
@@ -35,13 +30,13 @@ ss.http({
                         } catch {
                             res.setHeader('Vercel-CDN-Cache-Control', 'max-age=0');
                             res.setHeader('Cache-Control', 'max-age=0');
-                            word+="…"
+                            word+=""
                         }
                     }
                 }
                 res.writeHead(200, { "Content-Type": "application/json;charset=utf-8" });
-                res.end(JSON.stringify({summary: word}));
+                res.end(word);
             })
         });
-    }}).listen(5000)
+    }}).listen(3000)
     
