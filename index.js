@@ -9,7 +9,7 @@ ss.http({
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Vercel-CDN-Cache-Control', 'max-age=7200');
         res.setHeader('Cache-Control', 'max-age=7200');
-        fetch("http://lemurchat.anfans.cn/api/chat/conversation-trial", {
+        fetch("https://gpt.haixuntech.cn/api/v1/conversation/RefreshChat", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
