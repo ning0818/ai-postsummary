@@ -12,6 +12,7 @@ ss.http({
         fetch("https://gpt.haixuntech.cn/api/v1/conversation/RefreshChat", {
             method: "POST",
             headers: {
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTkxOTAxNTMsImlhdCI6MTY5ODU1MDE1Mywiand0VXNlcklkIjoiNjUzZGQxODk3MzRhYmY5YTQ2ZWUwMjBhIn0.ZfGyz89Lj61tKx5TMHtvx3HhmPykj-ERT80-bFEJW-E",
                 "Content-Type": "application/json",
                 "User-Agent": "Mozilla/5.0 (Linux; Android 9; Redmi 4 Prime) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Mobile Safari/537.36"
             },
