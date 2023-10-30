@@ -18,7 +18,19 @@ ss.http({
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.69"
             },
             body: JSON.stringify({
-                messages: `[{"conversation_id":"653f508b734abf9a46f06073","content":"概述一下这篇文章：${ req.getQueryVariable("content", "") }","chat_context_id_list":[],"is_gpt4":false,"model_name":"gpt-3.5-turbo","system_role_prompt":"Chat Ai对话","base_request":{"platform_type":"Web","client_version":"2.1","trace_id":"","signature":"","share":""}}]`
+                messages: `[{"conversation_id":"653f508b734abf9a46f06071","content":"概述一下这篇文章：${ req.getQueryVariable("content", "") }","chat_context_id_list":[],"is_gpt4":false,"model_name":"gpt-3.5-turbo","system_role_prompt":"Chat Ai对话","base_request":{"platform_type":"Web","client_version":"2.1","trace_id":"","signature":"","share":""}}]`
+            })
+        })
+        fetch("https://gpt.haixuntech.cn/api/v1/conversation/RefreshChat", {
+            method: "POST",
+            headers: {
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTkxOTAxNTMsImlhdCI6MTY5ODU1MDE1Mywiand0VXNlcklkIjoiNjUzZGQxODk3MzRhYmY5YTQ2ZWUwMjBhIn0.ZfGyz89Lj61tKx5TMHtvx3HhmPykj-ERT80-bFEJW-E",
+                "Referer": "https://gpt.haixuntech.cn/chat/653dd199734abf9a46ee024b",
+                "Content-Type": "application/json",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36 Edg/118.0.2088.69"
+            },
+            body: JSON.stringify({
+                messages: `[{"chat_result_id":"653f565e734abf9a46f07671","base_request":{"platform_type":"Web","client_version":"2.1","trace_id":"","signature":"","share":""}}]`
             })
         }).then(function (response) {
             response.text().then(function(t){
