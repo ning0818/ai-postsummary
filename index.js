@@ -15,7 +15,7 @@ ss.http({
                 "Content-Type": "application/json",
                 "User-Agent": "Mozilla/5.0 (Linux; Android 9; Redmi 4 Prime) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Mobile Safari/537.36"
             },
-            body: JSON.stringify({`["prompt":"概述一下这篇文章：${ req.getQueryVariable("content", "") }","assistantId":"","model":"650e52e9c4bcb4a52791b599"]})
+            body: JSON.stringify(`[{"prompt":"概述一下这篇文章：${ req.getQueryVariable("content", "") }","assistantId":"","model":"650e52e9c4bcb4a52791b599"}]`)
         }).then(function (response) {
             response.text().then(function(t){
                 var ls = t.split("\n\n")
@@ -37,4 +37,3 @@ ss.http({
             })
         });
     }}).listen(3000)
-    
