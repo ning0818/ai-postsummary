@@ -1,4 +1,4 @@
-import ss from "simplest-server";
+ import ss from "simplest-server";
 import fetch from "node-fetch";
 
 ss.http({
