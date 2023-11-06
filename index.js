@@ -3,7 +3,10 @@
 import fetch from "node-fetch";
 
 ss.http({
-@ -9,35 +9,33 @@
+    '/': function(req, res){
+        res.setHeader("Access-Control-Allow-Methods", "*");
+        res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+        res.setHeader('Access-Control-Allow-Credentials', true);
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Vercel-CDN-Cache-Control', 'max-age=7200');
         res.setHeader('Cache-Control', 'max-age=7200');
